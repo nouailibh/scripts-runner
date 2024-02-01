@@ -1,5 +1,7 @@
 name: 'Scripts runner'
-description: 'An actions to bootsrap scripts that need to be run before pushing our code to an X env.'
+description:
+  'An actions to bootsrap scripts that need to be run before pushing our code to
+  an X env.'
 author: 'nouailibh'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
@@ -12,6 +14,7 @@ inputs:
   scripts-folder:
     description: 'Your input description here'
     required: true
+    default: 'scripts'
 
 # Define your outputs here.
 outputs:
