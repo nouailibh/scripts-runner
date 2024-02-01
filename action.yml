@@ -1,6 +1,6 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Scripts runner'
+description: 'An actions to bootsrap scripts that need to be run before pushing our code to an X env.'
+author: 'nouailibh'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
@@ -9,15 +9,14 @@ branding:
 
 # Define your inputs here.
 inputs:
-  milliseconds:
+  scripts-folder:
     description: 'Your input description here'
     required: true
-    default: '1000'
 
 # Define your outputs here.
 outputs:
-  time:
-    description: 'Your output description here'
+  result:
+    description: 'Either your scripts failed or successded.'
 
 runs:
   using: node20
