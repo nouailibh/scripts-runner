@@ -1,7 +1,7 @@
 {
   "name": "scripts-runner",
   "description": "Scripts runner action.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "author": "nouailibh",
   "private": true,
   "homepage": "https://github.com/nouailibh/scripts-runner",
