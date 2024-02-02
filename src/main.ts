@@ -13,7 +13,7 @@ export async function run(): Promise<void> {
 
     console.log('this should run.....')
     console.log(scriptsFolder)
-    console.log(`Scripts are located in -> /${scriptsFolder}`)
+    console.log(`Scripts are located in: -> /${scriptsFolder}`)
 
     JSON.stringify(ghactions.context.payload, null, 2)
 
