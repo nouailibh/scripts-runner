@@ -10,6 +10,8 @@ export async function run(): Promise<void> {
     const scriptsFolder = core.getInput('scripts-folder', {
       trimWhitespace: true
     })
+
+    console.log('this should run.....')
     console.log(scriptsFolder)
     console.log(`Scripts are located in -> /${scriptsFolder}`)
 
