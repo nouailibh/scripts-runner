@@ -7,7 +7,9 @@ import * as ghactions from '@actions/github'
  */
 export async function run(): Promise<void> {
   try {
-    const scriptsFolder = core.getInput('scripts', { trimWhitespace: true })
+    const scriptsFolder = core.getInput('scripts-folder', {
+      trimWhitespace: true
+    })
     console.log(`Scripts are located in -> /${scriptsFolder}`)
 
     JSON.stringify(ghactions.context.payload, null, 2)
