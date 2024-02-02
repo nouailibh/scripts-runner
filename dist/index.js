@@ -28944,8 +28944,12 @@ const ghactions = __importStar(__nccwpck_require__(1272));
  */
 async function run() {
     try {
-        const scriptsFolder = core.getInput('scripts', { trimWhitespace: true });
-        console.log(`Scripts are located in -> /${scriptsFolder}`);
+        const scriptsFolder = core.getInput('scripts-folder', {
+            trimWhitespace: true
+        });
+        console.log('this should run.....');
+        console.log(scriptsFolder);
+        console.log(`Scripts are located in: -> /${scriptsFolder}`);
         JSON.stringify(ghactions.context.payload, null, 2);
         core.setOutput('success', true);
     }
