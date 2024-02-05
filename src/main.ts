@@ -10,7 +10,6 @@ export async function run(): Promise<void> {
     const scriptsFolder = core.getInput('scripts-folder', {
       trimWhitespace: true
     })
-    console.log(scriptsFolder)
     console.log(`Scripts are located in -> /${scriptsFolder}`)
 
     JSON.stringify(ghactions.context.payload, null, 2)
