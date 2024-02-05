@@ -13,7 +13,6 @@ export async function run(): Promise<void> {
     console.log(`Scripts are located in -> /${scriptsFolder}`)
 
     JSON.stringify(ghactions.context.payload, null, 2)
-
     core.setOutput('success', true)
   } catch (error) {
     // Fail the workflow run if an error occurs
