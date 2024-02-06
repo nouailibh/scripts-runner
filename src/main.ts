@@ -1,5 +1,6 @@
 import * as core from '@actions/core'
 import * as ghactions from '@actions/github'
+import { exec } from '@actions/exec'
 
 /**
  * The main function for the action.
@@ -10,9 +11,9 @@ export async function run(): Promise<void> {
     const scriptsFolder = core.getInput('scripts-folder', {
       trimWhitespace: true
     })
-    console.log(`Scripts are located in -> /${scriptsFolder}`)
 
-    JSON.stringify(ghactions.context.payload, null, 2)
+    await exec('ls -la', [scriptsFolder])
+
     core.setOutput('success', true)
   } catch (error) {
     // Fail the workflow run if an error occurs
